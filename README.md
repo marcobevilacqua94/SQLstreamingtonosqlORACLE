@@ -15,6 +15,8 @@ Steps:
   - deploy_ksql ksqldb.sql
 5) Verify that all data have been streamed and inserted in target Couchbase collections :)
 
+! if you get syntax errors try run "sed -i 's/\r//' ksqldb.sql" on both scripts
+
 ## Stream to Couchbase Capella
 
 ### Set up your Couchbase cluster on Capella
