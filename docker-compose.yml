@@ -165,6 +165,7 @@ services:
     build:
       context: .
       dockerfile: ./dockerfilecb
+    platform: linux/amd64
     environment:
       - CB_SERVICES=kv,n1ql,index,eventing
     volumes:
