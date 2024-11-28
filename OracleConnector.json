@@ -3,6 +3,10 @@
   "config": {
     "connector.class": "io.confluent.connect.oracle.cdc.OracleCdcSourceConnector",
     "confluent.topic.bootstrap.servers": "broker:29092",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": false,
+    "value.converter.schemas.enable": false,
     "tasks.max": 1,
     "oracle.server": "oracle-xe",
     "oracle.port": "1521",
