@@ -3,8 +3,9 @@
   "config": {
     "connector.class": "io.confluent.connect.oracle.cdc.OracleCdcSourceConnector",
     "confluent.topic.bootstrap.servers": "broker:29092",
-    "redo.log.consumer.bootstrap.servers": "broker:9092",
-    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "redo.log.consumer.bootstrap.servers": "broker:29092",
+    "redo.log.topic.name": "redo-log-topic-2",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
     "key.converter.schemas.enable": false,
     "value.converter.schemas.enable": false,
