@@ -163,8 +163,8 @@ services:
     hostname: couchbase
     image: belio1/couchbaseserver:1.0.1
     build:
-      context: .
-      dockerfile: ./dockerfilecb
+      context: ./couchbase-quickinit
+      dockerfile: ./Dockerfile
     platform: linux/amd64
     environment:
       - CB_SERVICES=kv,n1ql,index,eventing
