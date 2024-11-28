@@ -161,12 +161,14 @@ services:
 
   couchbase:
     hostname: couchbase
-    image: belio1/couchbaseserver:1.0.0
+    image: belio1/couchbaseserver:1.0.1
+    build:
+      context: ../
+    environment:
+      - CB_SERVICES=kv,n1ql,index,eventing
+    volumes:
+      - "./startup:/startup"
     ports:
-     - 8091-8096:8091-8096
-    environment:  
-      - USER=Administrator
-      - PASS=password
-      - BUCKET=test
-      - SCOPE=store
-      - COLLECTIONS=products,customers,orders,order_items
+      - "8091-8096:8091-8096"
+      - "11207:11207"
+      - "11210-11211:11210-11211"
