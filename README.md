@@ -72,3 +72,5 @@ UPDATE STORE.ORDER_ITEMS SET QUANTITY = 16 WHERE PRODUCTID = 5
 COMMIT
 /
 ```
+
+! press an extra endline (enter) after launching this command to commit the last statement
