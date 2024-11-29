@@ -45,3 +45,29 @@ Steps:
   - deploy_ksql ksqldb.sql
 17) Verify that all data have been streamed and inserted in target Couchbase collections :)
 
+Run this on sqlplus inside oracle container to see changes propagated in couchbase
+'''
+UPDATE STORE.ORDER_ITEMS SET QUANTITY = 16 WHERE PRODUCTID = 4
+/
+
+COMMIT
+/
+
+UPDATE STORE.ORDER_ITEMS SET QUANTITY = 16 WHERE PRODUCTID = 3
+/
+
+COMMIT
+/
+
+UPDATE STORE.ORDER_ITEMS SET QUANTITY = 16 WHERE PRODUCTID = 6
+/
+
+COMMIT
+/
+
+UPDATE STORE.ORDER_ITEMS SET QUANTITY = 16 WHERE PRODUCTID = 5
+/
+
+COMMIT
+/
+'''
