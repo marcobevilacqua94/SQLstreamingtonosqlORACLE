@@ -46,7 +46,8 @@ Steps:
 17) Verify that all data have been streamed and inserted in target Couchbase collections :)
 
 Run this on sqlplus inside oracle container to see changes propagated in couchbase
-'''
+
+```
 UPDATE STORE.ORDER_ITEMS SET QUANTITY = 16 WHERE PRODUCTID = 4
 /
 
@@ -70,4 +71,4 @@ UPDATE STORE.ORDER_ITEMS SET QUANTITY = 16 WHERE PRODUCTID = 5
 
 COMMIT
 /
-'''
+```
