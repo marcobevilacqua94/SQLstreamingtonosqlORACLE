@@ -45,7 +45,7 @@ Steps:
   - deploy_ksql ksqldb.sql
 17) Verify that all data have been streamed and inserted in target Couchbase collections :)
 
-Run this on sqlplus inside oracle container to see changes propagated in couchbase
+Run this on sqlplus (system/oracle) inside oracle container to see changes propagated in couchbase
 
 ```
 SET AUTO ON
